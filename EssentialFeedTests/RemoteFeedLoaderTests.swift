@@ -63,6 +63,18 @@ class RemoteFeedLoaderTests: XCTestCase {
         }
     }
     
+    func test_load_deliverErrorOnNon200HTTPResponseWithInvalidJSON() {
+        let (sut, client) = makeSUT()
+        
+        var capturedErrors = [RemoteFeedLoader.Error]()
+        sut.load { capturedErrors.append($0) }
+        
+        let invalidJSON = Data("invalid json".utf8)
+        client.complete(withStatusCode: 200, data: invalidJSON)
+        
+        XCTAssertEqual(capturedErrors, [.invalidData])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(url: URL = URL(string: "https://a-url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
@@ -86,7 +98,7 @@ class RemoteFeedLoaderTests: XCTestCase {
             messages[index].completion(.failure(error))
         }
         
-        func complete(withStatusCode code: Int, at index: Int = 0) {
+        func complete(withStatusCode code: Int, data: Data = Data(), at index: Int = 0) {
             let response = HTTPURLResponse(
                 url: requestedURLs[index],
                 statusCode: code,
@@ -94,7 +106,13 @@ class RemoteFeedLoaderTests: XCTestCase {
                 headerFields: nil
             )!
             
-            messages[index].completion(.success(response))
+            messages[index].completion(.success(data, response))
         }
     }
 }
+
+/*
+ stub : 로직이 실행되었을 때의 결과가 중요
+ mock : 실행된 로직이 예상대로 실행되었는지가 중요(예외 사항이 발생할 수 있음)
+ spy : 로직이 어떻게 실행되었는지 혹은 얼마나 실행되었는지와 결과에 대한 기록이 중요
+ */
