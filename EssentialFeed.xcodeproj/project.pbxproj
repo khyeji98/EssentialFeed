@@ -15,6 +15,7 @@
 		2DDE276A29CAF1F5008AEC17 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE276929CAF1F5008AEC17 /* RemoteFeedLoaderTests.swift */; };
 		2DDE276D29CB02BC008AEC17 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE276C29CB02BC008AEC17 /* RemoteFeedLoader.swift */; };
 		2DDE27D329DAD0C5008AEC17 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE27D229DAD0C5008AEC17 /* HTTPClient.swift */; };
+		2DDE27D529DAD11B008AEC17 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE27D429DAD11B008AEC17 /* FeedItemsMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		2DDE276929CAF1F5008AEC17 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		2DDE276C29CB02BC008AEC17 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		2DDE27D229DAD0C5008AEC17 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2DDE27D429DAD11B008AEC17 /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDE276C29CB02BC008AEC17 /* RemoteFeedLoader.swift */,
+				2DDE27D429DAD11B008AEC17 /* FeedItemsMapper.swift */,
 				2DDE27D229DAD0C5008AEC17 /* HTTPClient.swift */,
 			);
 			path = FeedAPI;
@@ -225,6 +228,7 @@
 				2DDE276D29CB02BC008AEC17 /* RemoteFeedLoader.swift in Sources */,
 				2DDE27D329DAD0C5008AEC17 /* HTTPClient.swift in Sources */,
 				2D01ED4529BF2F0200DB3808 /* FeedLoader.swift in Sources */,
+				2DDE27D529DAD11B008AEC17 /* FeedItemsMapper.swift in Sources */,
 				2D01ED4329BF2DA700DB3808 /* FeedItem.swift in Sources */,
 				2D01ED2D29BF2D8D00DB3808 /* EssentialFeed.docc in Sources */,
 			);
