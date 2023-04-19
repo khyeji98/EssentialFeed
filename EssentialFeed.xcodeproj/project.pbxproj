@@ -65,7 +65,6 @@
 		2D01ED1E29BF2D8D00DB3808 = {
 			isa = PBXGroup;
 			children = (
-				2DC4BBA129ED4B60008DE44F /* URLSessionHTTPClientTests.swift */,
 				2D01ED2A29BF2D8D00DB3808 /* EssentialFeed */,
 				2D01ED3629BF2D8E00DB3808 /* EssentialFeedTests */,
 				2D01ED2929BF2D8D00DB3808 /* Products */,
@@ -122,6 +121,7 @@
 		2DDE27D629DAD8C8008AEC17 /* FeedAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2DC4BBA129ED4B60008DE44F /* URLSessionHTTPClientTests.swift */,
 				2DDE276929CAF1F5008AEC17 /* RemoteFeedLoaderTests.swift */,
 			);
 			path = FeedAPI;
